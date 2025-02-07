@@ -13,7 +13,7 @@ def class_number(request):
 
 
     if number is None:
-        return Response({"number": "null", "error": True},
+        return Response({"number": None, "error": True},
                         status=status.HTTP_400_BAD_REQUEST,)
     
     #if no number is inputed
