@@ -11,6 +11,11 @@ import re
 def class_number(request):
     number = request.query_params.get("number")
 
+
+    if number is None:
+        return Response({"number": "None", "error": "True"},
+                        status=status.HTTP_400_BAD_REQUEST,)
+    
     #if no number is inputed
     if not re.match(r"^-?\d+$", number):
         return Response(
