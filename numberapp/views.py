@@ -20,7 +20,7 @@ def class_number(request):
     #if no number is inputed
     if not re.match(r"^-?\d+$", number):
         return JsonResponse(
-            {"message": number, "error": True},
+            {"number": number, "error": True},
             status=status.HTTP_400_BAD_REQUEST,
         )
     

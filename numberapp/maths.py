@@ -14,6 +14,9 @@ def num_prime(number):
 
 def num_perfect(number):
    #check if number is perfect
+   if number <= 0:
+      return False
+
    return sum(num for num in range(1, number // 2 + 1) if number % num == 0 ) == number
 
 def num_properties(number):
